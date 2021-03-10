@@ -13,6 +13,10 @@ twitter_token <- create_token(
 
 post_tweet(status = "We'll fly.")
 
-#BTS
-BTS = search_tweets(
-  '#BTS', n=100, type = 'mixed', include_rts = F)
+#covid
+cvid = search_tweets(
+  '#covid', n=1000, type = 'mixed', include_rts = F)
+
+head(cvid$screen_name)
+unique(cvid$screen_name)
+print(cvid$text)
